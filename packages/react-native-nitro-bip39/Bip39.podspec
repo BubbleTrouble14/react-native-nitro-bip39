@@ -20,7 +20,13 @@ Pod::Spec.new do |s|
     "ios/**/*.{m,mm}",
     # Implementation (C++ objects)
     "cpp/**/*.{hpp,cpp}",
+    "bip39_cpp/src/*.{cpp}",
+    "bip39_cpp/include/*.{h}"
   ]
+
+  s.dependency "OpenSSL-Universal"
+
+  s.vendored_frameworks = "ios/Clibutf8proc.xcframework"
 
   load 'nitrogen/generated/ios/Bip39+autolinking.rb'
   add_nitrogen_files(s)

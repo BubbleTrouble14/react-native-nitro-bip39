@@ -7,4 +7,4 @@ export * from './specs/Math.nitro'
 export * from './specs/Bip39.nitro'
 
 export const MathModule = NitroModules.createHybridObject<Math>('Math')
-export const Bip39Module = NitroModules.createHybridObject<Bip39>('Bip39')
+export const bip39 = NitroModules.createHybridObject<Bip39>('Bip39')

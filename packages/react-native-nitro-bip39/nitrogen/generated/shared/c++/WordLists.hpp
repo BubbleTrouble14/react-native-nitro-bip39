@@ -23,7 +23,7 @@
 #error NitroModules cannot be found! Are you sure you installed NitroModules properly?
 #endif
 
-namespace margelo::nitro::bip39 {
+namespace margelo::nitro::rnbip39 {
 
   /**
    * An enum which can be represented as a JavaScript union (WordLists).
@@ -41,11 +41,11 @@ namespace margelo::nitro::bip39 {
     SPANISH      SWIFT_NAME(spanish) = 9,
   } CLOSED_ENUM;
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39
 
 namespace margelo::nitro {
 
-  using namespace margelo::nitro::bip39;
+  using namespace margelo::nitro::rnbip39;
 
   // C++ WordLists <> JS WordLists (union)
   template <>

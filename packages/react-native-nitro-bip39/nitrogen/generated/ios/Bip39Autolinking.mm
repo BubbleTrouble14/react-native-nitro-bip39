@@ -20,7 +20,7 @@
 
 + (void) load {
   using namespace margelo::nitro;
-  using namespace margelo::nitro::bip39;
+  using namespace margelo::nitro::rnbip39;
 
   HybridObjectRegistry::registerHybridObjectConstructor(
     "Math",

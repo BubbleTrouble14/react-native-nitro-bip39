@@ -14,7 +14,7 @@
 #endif
 
 // Forward declaration of `WordLists` to properly resolve imports.
-namespace margelo::nitro::bip39 { enum class WordLists; }
+namespace margelo::nitro::rnbip39 { enum class WordLists; }
 // Forward declaration of `ArrayBuffer` to properly resolve imports.
 namespace NitroModules { class ArrayBuffer; }
 
@@ -23,7 +23,7 @@ namespace NitroModules { class ArrayBuffer; }
 #include <optional>
 #include <NitroModules/ArrayBuffer.hpp>
 
-namespace margelo::nitro::bip39 {
+namespace margelo::nitro::rnbip39 {
 
   using namespace margelo::nitro;
 
@@ -72,4 +72,4 @@ namespace margelo::nitro::bip39 {
       static constexpr auto TAG = "Bip39";
   };
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39

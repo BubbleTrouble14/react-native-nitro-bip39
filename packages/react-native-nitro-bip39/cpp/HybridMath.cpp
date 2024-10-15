@@ -1,6 +1,6 @@
 #include "HybridMath.hpp"
 
-namespace margelo::nitro::bip39
+namespace margelo::nitro::rnbip39
 {
     double HybridMath::add(double a, double b)
     {

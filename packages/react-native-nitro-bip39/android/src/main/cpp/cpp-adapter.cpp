@@ -3,5 +3,5 @@
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
 {
-  return margelo::nitro::bip39::initialize(vm);
+  return margelo::nitro::rnbip39::initialize(vm);
 }

@@ -8,7 +8,7 @@
 /**
  * Represents the JS union `WordLists`, backed by a C++ enum.
  */
-public typealias WordLists = margelo.nitro.bip39.WordLists
+public typealias WordLists = margelo.nitro.rnbip39.WordLists
 
 public extension WordLists {
   /**

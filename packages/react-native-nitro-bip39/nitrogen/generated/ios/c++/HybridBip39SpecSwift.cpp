@@ -7,5 +7,5 @@
 
 #include "HybridBip39SpecSwift.hpp"
 
-namespace margelo::nitro::bip39 {
-} // namespace margelo::nitro::bip39
+namespace margelo::nitro::rnbip39 {
+} // namespace margelo::nitro::rnbip39

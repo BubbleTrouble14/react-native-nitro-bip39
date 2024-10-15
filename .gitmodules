@@ -1,0 +1,3 @@
+[submodule "packages/react-native-nitro-bip39/bip39_cpp"]
+	path = packages/react-native-nitro-bip39/bip39_cpp
+	url = https://github.com/BubbleTrouble14/bip39_cpp.git

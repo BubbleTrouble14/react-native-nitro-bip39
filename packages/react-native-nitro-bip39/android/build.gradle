@@ -126,4 +126,7 @@ dependencies {
 
   // Add a dependency on NitroModules
   implementation project(":react-native-nitro-modules")
+
+  implementation 'com.android.ndk.thirdparty:openssl:1.1.1q-beta-1'
+  implementation 'io.github.cryptorg:utf8proc:2.9.0-beta-1'
 }

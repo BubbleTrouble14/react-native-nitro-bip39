@@ -19,11 +19,11 @@ import NitroModules
  */
 public class HybridBip39SpecCxx {
   /**
-   * The Swift <> C++ bridge's namespace (`margelo::nitro::bip39::bridge::swift`)
+   * The Swift <> C++ bridge's namespace (`margelo::nitro::rnbip39::bridge::swift`)
    * from `Bip39-Swift-Cxx-Bridge.hpp`.
    * This contains specialized C++ templates, and C++ helper functions that can be accessed from Swift.
    */
-  public typealias bridge = margelo.nitro.bip39.bridge.swift
+  public typealias bridge = margelo.nitro.rnbip39.bridge.swift
 
   /**
    * Holds an instance of the `HybridBip39Spec` Swift protocol.
@@ -88,7 +88,7 @@ public class HybridBip39SpecCxx {
   @inline(__always)
   public func setDefaultWordlist(value: Int32) -> Void {
     do {
-      try self.implementation.setDefaultWordlist(value: margelo.nitro.bip39.WordLists(rawValue: value)!)
+      try self.implementation.setDefaultWordlist(value: margelo.nitro.rnbip39.WordLists(rawValue: value)!)
       return 
     } catch {
       let message = "\(error.localizedDescription)"

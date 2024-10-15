@@ -8,25 +8,11 @@ import {
   Button,
   Platform,
 } from 'react-native'
-import {
-  HybridTestObjectCpp,
-  HybridTestObjectSwiftKotlin,
-  HybridChild,
-  HybridBase,
-} from 'react-native-nitro-image'
 import { getTests, type TestRunner } from '../getTests'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { logPrototypeChain } from '../logPrototypeChain'
 import SegmentedControl from '@react-native-segmented-control/segmented-control'
 import { NitroModules } from 'react-native-nitro-modules'
-
-logPrototypeChain(HybridChild)
-console.log(HybridBase.baseValue)
-console.log(HybridChild.baseValue)
-console.log(HybridChild.childValue)
-
-logPrototypeChain(HybridTestObjectCpp)
-
+import { bip39 } from 'react-native-nitro-bip39'
 interface TestState {
   runner: TestRunner
   state: '📱 Click to run' | '⏳ Running' | '❌ Failed' | '✅ Passed'
@@ -56,14 +42,9 @@ function TestCase({ test, onRunPressed }: TestCaseProps): React.ReactElement {
 
 export function HybridObjectTestsScreen() {
   const [selectedIndex, setSelectedIndex] = React.useState(0)
-  const selectedObject = [HybridTestObjectCpp, HybridTestObjectSwiftKotlin][
-    selectedIndex
-  ]
+  const selectedObject = [bip39][selectedIndex]
   console.log(`Showing Tests for HybridObject "${selectedObject?.name}"`)
-  const allTests = React.useMemo(
-    () => getTests(selectedObject ?? HybridTestObjectCpp),
-    [selectedObject]
-  )
+  const allTests = React.useMemo(() => getTests(), [])
   const [tests, setTests] = React.useState<TestState[]>(() =>
     allTests.map((t) => ({
       runner: t,

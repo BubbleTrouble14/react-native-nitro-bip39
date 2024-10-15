@@ -13,7 +13,7 @@
 namespace Bip39 { class HybridBip39SpecCxx; }
 
 // Forward declaration of `WordLists` to properly resolve imports.
-namespace margelo::nitro::bip39 { enum class WordLists; }
+namespace margelo::nitro::rnbip39 { enum class WordLists; }
 // Forward declaration of `ArrayBuffer` to properly resolve imports.
 namespace NitroModules { class ArrayBuffer; }
 // Forward declaration of `ArrayBufferHolder` to properly resolve imports.
@@ -33,7 +33,7 @@ namespace NitroModules { class ArrayBufferHolder; }
 
 #include "Bip39-Swift-Cxx-Umbrella.hpp"
 
-namespace margelo::nitro::bip39 {
+namespace margelo::nitro::rnbip39 {
 
   /**
    * The C++ part of HybridBip39SpecCxx.swift.
@@ -104,4 +104,4 @@ namespace margelo::nitro::bip39 {
     Bip39::HybridBip39SpecCxx _swiftPart;
   };
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39

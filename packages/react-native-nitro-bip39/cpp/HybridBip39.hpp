@@ -2,7 +2,7 @@
 
 #include "HybridBip39Spec.hpp"
 
-namespace margelo::nitro::bip39
+namespace margelo::nitro::rnbip39
 {
 
     using namespace facebook;
@@ -24,6 +24,8 @@ namespace margelo::nitro::bip39
 
     private:
         WordLists _defaultWordlist = WordLists::ENGLISH;
+        std::vector<uint8_t> generateEntropy(int wordCount);
+        std::string wordListToString(WordLists wordlist);
     };
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39

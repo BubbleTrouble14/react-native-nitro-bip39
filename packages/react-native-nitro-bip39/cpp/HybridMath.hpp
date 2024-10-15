@@ -2,7 +2,7 @@
 
 #include "HybridMathSpec.hpp"
 
-namespace margelo::nitro::bip39
+namespace margelo::nitro::rnbip39
 {
 
     using namespace facebook;

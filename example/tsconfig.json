@@ -1,12 +1,6 @@
 {
-  "references": [
-    {
-      "path": "../packages/react-native-nitro-modules"
-    }
-  ],
-  "include": [
-    "src"
-  ],
+  "references": [],
+  "include": ["src"],
   "compilerOptions": {
     "composite": true,
     "noEmit": true,

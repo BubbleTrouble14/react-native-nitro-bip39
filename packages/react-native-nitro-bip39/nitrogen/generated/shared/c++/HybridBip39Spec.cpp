@@ -7,7 +7,7 @@
 
 #include "HybridBip39Spec.hpp"
 
-namespace margelo::nitro::bip39 {
+namespace margelo::nitro::rnbip39 {
 
   void HybridBip39Spec::loadHybridMethods() {
     // load base methods/properties
@@ -25,4 +25,4 @@ namespace margelo::nitro::bip39 {
     });
   }
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39

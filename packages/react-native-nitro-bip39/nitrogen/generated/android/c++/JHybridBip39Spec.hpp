@@ -14,7 +14,7 @@
 
 
 
-namespace margelo::nitro::bip39 {
+namespace margelo::nitro::rnbip39 {
 
   using namespace facebook;
 
@@ -60,4 +60,4 @@ namespace margelo::nitro::bip39 {
     jni::global_ref<JHybridBip39Spec::javaobject> _javaPart;
   };
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39

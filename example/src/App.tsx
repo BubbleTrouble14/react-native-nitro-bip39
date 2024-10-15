@@ -1,13 +1,19 @@
 import * as React from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { MathModule, Bip39Module } from 'react-native-nitro-bip39'
+import { bip39 } from 'react-native-nitro-bip39'
+import { HybridObjectTestsScreen } from './screens/HybridObjectTestsScreen'
 
 export default function App() {
   React.useEffect(() => {
-    console.log(MathModule.add(2, 4))
-    console.log(Bip39Module.getDefaultWordlist())
+    const seed = bip39.mnemonicToSeed(
+      'zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo vote',
+      'TREZOR'
+    )
+    console.log(Buffer.from(seed).toString('hex'))
   }, [])
   return (
-    <SafeAreaProvider>{/* <HybridObjectTestsScreen /> */}</SafeAreaProvider>
+    <SafeAreaProvider>
+      <HybridObjectTestsScreen />
+    </SafeAreaProvider>
   )
 }

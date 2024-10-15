@@ -17,7 +17,7 @@
 
 
 
-namespace margelo::nitro::bip39 {
+namespace margelo::nitro::rnbip39 {
 
   using namespace margelo::nitro;
 
@@ -59,4 +59,4 @@ namespace margelo::nitro::bip39 {
       static constexpr auto TAG = "Math";
   };
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39

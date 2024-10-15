@@ -13,7 +13,7 @@ namespace NitroModules { class ArrayBufferHolder; }
 // Forward declaration of `ArrayBuffer` to properly resolve imports.
 namespace NitroModules { class ArrayBuffer; }
 // Forward declaration of `WordLists` to properly resolve imports.
-namespace margelo::nitro::bip39 { enum class WordLists; }
+namespace margelo::nitro::rnbip39 { enum class WordLists; }
 
 // Include C++ defined types
 #if __has_include("WordLists.hpp")
@@ -36,7 +36,7 @@ namespace margelo::nitro::bip39 { enum class WordLists; }
  * Contains specialized versions of C++ templated types so they can be accessed from Swift,
  * as well as helper functions to interact with those C++ types from Swift.
  */
-namespace margelo::nitro::bip39::bridge::swift {
+namespace margelo::nitro::rnbip39::bridge::swift {
 
   /**
    * Specialized version of `std::optional<double>`.
@@ -70,4 +70,4 @@ namespace margelo::nitro::bip39::bridge::swift {
     return std::optional<std::string>(value);
   }
 
-} // namespace margelo::nitro::bip39::bridge::swift
+} // namespace margelo::nitro::rnbip39::bridge::swift

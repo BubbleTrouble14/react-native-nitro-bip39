@@ -8,7 +8,7 @@
 #include <jni.h>
 #include <NitroModules/NitroDefines.hpp>
 
-namespace margelo::nitro::bip39 {
+namespace margelo::nitro::rnbip39 {
 
   /**
    * Initializes the native (C++) part of Bip39, and autolinks all Hybrid Objects.
@@ -16,10 +16,10 @@ namespace margelo::nitro::bip39 {
    * Example:
    * ```cpp (cpp-adapter.cpp)
    * JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void*) {
-   *   return margelo::nitro::bip39::initialize(vm);
+   *   return margelo::nitro::rnbip39::initialize(vm);
    * }
    * ```
    */
   int initialize(JavaVM* vm);
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39

@@ -1,5 +1,5 @@
 {
-  "cxxNamespace": ["bip39"],
+  "cxxNamespace": ["rnbip39"],
   "ios": {
     "iosModulename": "Bip39"
   },

@@ -15,16 +15,16 @@
 #include "HybridMath.hpp"
 #include "HybridBip39.hpp"
 
-namespace margelo::nitro::bip39 {
+namespace margelo::nitro::rnbip39 {
 
 int initialize(JavaVM* vm) {
   using namespace margelo::nitro;
-  using namespace margelo::nitro::bip39;
+  using namespace margelo::nitro::rnbip39;
   using namespace facebook;
 
   return facebook::jni::initialize(vm, [] {
     // Register native JNI methods
-    margelo::nitro::bip39::JHybridBip39Spec::registerNatives();
+    margelo::nitro::rnbip39::JHybridBip39Spec::registerNatives();
 
     // Register Nitro Hybrid Objects
     HybridObjectRegistry::registerHybridObjectConstructor(
@@ -48,4 +48,4 @@ int initialize(JavaVM* vm) {
   });
 }
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39

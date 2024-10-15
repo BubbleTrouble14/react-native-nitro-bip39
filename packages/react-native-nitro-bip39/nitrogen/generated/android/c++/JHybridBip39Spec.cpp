@@ -8,7 +8,7 @@
 #include "JHybridBip39Spec.hpp"
 
 // Forward declaration of `WordLists` to properly resolve imports.
-namespace margelo::nitro::bip39 { enum class WordLists; }
+namespace margelo::nitro::rnbip39 { enum class WordLists; }
 // Forward declaration of `ArrayBuffer` to properly resolve imports.
 namespace NitroModules { class ArrayBuffer; }
 
@@ -19,7 +19,7 @@ namespace NitroModules { class ArrayBuffer; }
 #include <NitroModules/JArrayBuffer.hpp>
 #include <optional>
 
-namespace margelo::nitro::bip39 {
+namespace margelo::nitro::rnbip39 {
 
   jni::local_ref<JHybridBip39Spec::jhybriddata> JHybridBip39Spec::initHybrid(jni::alias_ref<jhybridobject> jThis) {
     return makeCxxInstance(jThis);
@@ -80,4 +80,4 @@ namespace margelo::nitro::bip39 {
     return result->toStdString();
   }
 
-} // namespace margelo::nitro::bip39
+} // namespace margelo::nitro::rnbip39
