@@ -30,7 +30,7 @@ target_sources(
   ../nitrogen/generated/shared/c++/HybridBip39Spec.cpp
   ../nitrogen/generated/shared/c++/HybridMathSpec.cpp
   # Android-specific Nitrogen C++ sources
-  ../nitrogen/generated/android/c++/JHybridBip39Spec.cpp
+  
 )
 
 # Add all libraries required by the generated specs

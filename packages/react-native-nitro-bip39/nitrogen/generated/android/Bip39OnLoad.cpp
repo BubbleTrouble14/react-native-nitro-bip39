@@ -11,7 +11,6 @@
 #include <fbjni/fbjni.h>
 #include <NitroModules/HybridObjectRegistry.hpp>
 
-#include "JHybridBip39Spec.hpp"
 #include "HybridMath.hpp"
 #include "HybridBip39.hpp"
 
@@ -24,7 +23,7 @@ int initialize(JavaVM* vm) {
 
   return facebook::jni::initialize(vm, [] {
     // Register native JNI methods
-    margelo::nitro::rnbip39::JHybridBip39Spec::registerNatives();
+    
 
     // Register Nitro Hybrid Objects
     HybridObjectRegistry::registerHybridObjectConstructor(

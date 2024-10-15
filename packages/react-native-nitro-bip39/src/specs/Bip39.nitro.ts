@@ -15,7 +15,7 @@ export type WordLists =
 export type WordCount = 12 | 15 | 18 | 21 | 24
 
 export interface Bip39
-  extends HybridObject<{ ios: 'swift'; android: 'kotlin' }> {
+  extends HybridObject<{ ios: 'c++'; android: 'c++' }> {
   getDefaultWordlist(): WordLists
   setDefaultWordlist(value: WordLists): void
   generateMnemonic(
