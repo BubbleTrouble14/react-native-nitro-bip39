@@ -1,0 +1,16 @@
+{
+  "cxxNamespace": ["bip39"],
+  "ios": {
+    "iosModulename": "Bip39"
+  },
+  "android": {
+    "androidNamespace": ["bip39"],
+    "androidCxxLibName": "Bip39"
+  },
+  "autolinking": {
+    "Math": {
+      "cpp": "HybridMath"
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}

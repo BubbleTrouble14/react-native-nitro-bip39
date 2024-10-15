@@ -1,0 +1,67 @@
+{
+  "name": "react-native-nitro",
+  "packageManager": "bun@1.1.21",
+  "private": true,
+  "version": "0.11.0",
+  "repository": "https://github.com/mrousavy/nitro.git",
+  "author": "Marc Rousavy <me@mrousavy.com> (https://github.com/mrousavy)",
+  "scripts": {
+    "check-all": "./scripts/clang-format.sh",
+    "bootstrap": "bun --filter=\"**\" install && bun tsc && bun --filter=\"react-native-nitro-example\" pods",
+    "typescript": "bun --filter=\"**\" typescript",
+    "release": "release-it",
+    "clean": "rm -rf packages/**/tsconfig.tsbuildinfo packages/**/node_modules packages/**/lib"
+  },
+  "workspaces": [
+    "packages/react-native-nitro-bip39",
+    "example"
+  ],
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@release-it/bumper": "^6.0.1",
+    "@jamesacarr/eslint-formatter-github-actions": "^0.2.0",
+    "release-it": "^17.6.0"
+  },
+  "release-it": {
+    "npm": {
+      "publish": false
+    },
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}",
+      "requireCleanWorkingDir": false
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "✨ Features"
+            },
+            {
+              "type": "perf",
+              "section": "💨 Performance Improvements"
+            },
+            {
+              "type": "fix",
+              "section": "🐛 Bug Fixes"
+            },
+            {
+              "type": "chore(deps)",
+              "section": "🛠️ Dependency Upgrades"
+            },
+            {
+              "type": "docs",
+              "section": "📚 Documentation"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
