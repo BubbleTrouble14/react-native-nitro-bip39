@@ -11,6 +11,7 @@
 #import <type_traits>
 
 #include "HybridMath.hpp"
+#include "HybridBip39.hpp"
 
 @interface Bip39Autolinking : NSObject
 @end
@@ -28,6 +29,15 @@
                     "The HybridObject \"HybridMath\" is not default-constructible! "
                     "Create a public constructor that takes zero arguments to be able to autolink this HybridObject.");
       return std::make_shared<HybridMath>();
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Bip39",
+    []() -> std::shared_ptr<HybridObject> {
+      static_assert(std::is_default_constructible_v<HybridBip39>,
+                    "The HybridObject \"HybridBip39\" is not default-constructible! "
+                    "Create a public constructor that takes zero arguments to be able to autolink this HybridObject.");
+      return std::make_shared<HybridBip39>();
     }
   );
 }

@@ -8,12 +8,23 @@
 #pragma once
 
 // Forward declarations of C++ defined types
+// Forward declaration of `ArrayBuffer` to properly resolve imports.
+namespace NitroModules { class ArrayBuffer; }
+// Forward declaration of `HybridBip39Spec` to properly resolve imports.
+namespace margelo::nitro::bip39 { class HybridBip39Spec; }
 // Forward declaration of `HybridMathSpec` to properly resolve imports.
 namespace margelo::nitro::bip39 { class HybridMathSpec; }
+// Forward declaration of `WordLists` to properly resolve imports.
+namespace margelo::nitro::bip39 { enum class WordLists; }
 
 // Include C++ defined types
+#include "HybridBip39Spec.hpp"
 #include "HybridMathSpec.hpp"
+#include "WordLists.hpp"
+#include <NitroModules/ArrayBuffer.hpp>
 #include <memory>
+#include <optional>
+#include <string>
 
 // C++ helpers for Swift
 #include "Bip39-Swift-Cxx-Bridge.hpp"
@@ -25,6 +36,8 @@ namespace margelo::nitro::bip39 { class HybridMathSpec; }
 #include <NitroModules/PromiseHolder.hpp>
 
 // Forward declarations of Swift defined types
+// Forward declaration of `HybridBip39SpecCxx` to properly resolve imports.
+namespace Bip39 { class HybridBip39SpecCxx; }
 // Forward declaration of `HybridMathSpecCxx` to properly resolve imports.
 namespace Bip39 { class HybridMathSpecCxx; }
 

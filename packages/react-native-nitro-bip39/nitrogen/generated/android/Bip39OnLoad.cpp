@@ -11,7 +11,9 @@
 #include <fbjni/fbjni.h>
 #include <NitroModules/HybridObjectRegistry.hpp>
 
+#include "JHybridBip39Spec.hpp"
 #include "HybridMath.hpp"
+#include "HybridBip39.hpp"
 
 namespace margelo::nitro::bip39 {
 
@@ -22,7 +24,7 @@ int initialize(JavaVM* vm) {
 
   return facebook::jni::initialize(vm, [] {
     // Register native JNI methods
-    
+    margelo::nitro::bip39::JHybridBip39Spec::registerNatives();
 
     // Register Nitro Hybrid Objects
     HybridObjectRegistry::registerHybridObjectConstructor(
@@ -32,6 +34,15 @@ int initialize(JavaVM* vm) {
                       "The HybridObject \"HybridMath\" is not default-constructible! "
                       "Create a public constructor that takes zero arguments to be able to autolink this HybridObject.");
         return std::make_shared<HybridMath>();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Bip39",
+      []() -> std::shared_ptr<HybridObject> {
+        static_assert(std::is_default_constructible_v<HybridBip39>,
+                      "The HybridObject \"HybridBip39\" is not default-constructible! "
+                      "Create a public constructor that takes zero arguments to be able to autolink this HybridObject.");
+        return std::make_shared<HybridBip39>();
       }
     );
   });
