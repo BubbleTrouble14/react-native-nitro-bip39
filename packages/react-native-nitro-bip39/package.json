@@ -39,14 +39,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrousavy/nitro.git"
+    "url": "git+https://github.com/BubbleTrouble14/react-native-nitro-bip39.git"
   },
-  "author": "Marc Rousavy <me@mrousavy.com> (https://github.com/mrousavy)",
+  "author": "Ronald Goedeke (https://github.com/BubbleTrouble14)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrousavy/nitro/issues"
+    "url": "https://github.com/BubbleTrouble14/react-native-nitro-bip39/issues"
   },
-  "homepage": "https://github.com/mrousavy/nitro#readme",
+  "homepage": "https://github.com/BubbleTrouble14/react-native-nitro-bip39#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
