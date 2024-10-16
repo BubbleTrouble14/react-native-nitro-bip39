@@ -28,7 +28,6 @@ target_sources(
   ../nitrogen/generated/android/Bip39OnLoad.cpp
   # Shared Nitrogen C++ sources
   ../nitrogen/generated/shared/c++/HybridBip39Spec.cpp
-  ../nitrogen/generated/shared/c++/HybridMathSpec.cpp
   # Android-specific Nitrogen C++ sources
   
 )

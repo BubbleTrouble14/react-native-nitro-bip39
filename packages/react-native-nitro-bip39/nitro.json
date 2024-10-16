@@ -8,9 +8,6 @@
     "androidCxxLibName": "Bip39"
   },
   "autolinking": {
-    "Math": {
-      "cpp": "HybridMath"
-    },
     "Bip39": {
       "cpp": "HybridBip39"
     }

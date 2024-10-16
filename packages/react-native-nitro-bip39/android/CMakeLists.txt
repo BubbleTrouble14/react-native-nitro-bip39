@@ -17,7 +17,6 @@ add_library(${PACKAGE_NAME} SHARED
         ../bip39_cpp/src/langs.cpp
         ../cpp/HybridBip39.cpp
         ../cpp/Bip39Utils.cpp
-        ../cpp/HybridMath.cpp
 )
 
 # Add Nitrogen specs :)
