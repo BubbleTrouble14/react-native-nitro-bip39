@@ -35,6 +35,7 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\" --fix",
     "lint-ci": "eslint \"**/*.{js,ts,tsx}\" -f @jamesacarr/github-actions",
     "typescript": "tsc --noEmit false",
+    "release": "release-it",
     "specs": "bun run --filter=\"**\" typescript && bun nitro-codegen --logLevel=\"debug\""
   },
   "keywords": [
