@@ -1,6 +1,6 @@
 {
   "name": "react-native-nitro-bip39",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A template for Nitro Modules.",
   "main": "lib/index",
   "module": "lib/index",
