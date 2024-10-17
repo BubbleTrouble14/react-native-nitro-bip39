@@ -19,6 +19,7 @@
     "android/gradle.properties",
     "android/CMakeLists.txt",
     "android/src",
+    "nitrogen",
     "ios/**/*.h",
     "ios/**/*.m",
     "ios/**/*.mm",
